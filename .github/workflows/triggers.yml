@@ -1,0 +1,20 @@
+name: Tres tristes triggers
+run-name: ¡Estoy aprendiendo GitHub Actions!
+on:
+  push:
+    branches:
+      - aprendiendo-github-actions
+  workflow_dispatch:
+    inputs:
+      alerta:
+        description: 'nivel'
+        required: true
+        default: medio
+        type: choice
+        options:
+        - bajo
+        - medio
+  schedule:
+      - cron: '20 11,23 * * *'
+        
+  
